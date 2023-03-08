@@ -1,0 +1,3 @@
+.van-popup--center {
+    max-width: calc(100vh * 0.67) !important;
+}

@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="44">
+          <list size="56">
             <item index="0" class="java.lang.String" itemvalue="h-full" />
             <item index="1" class="java.lang.String" itemvalue="relative" />
             <item index="2" class="java.lang.String" itemvalue="min-h-screen" />
@@ -50,6 +50,18 @@
             <item index="41" class="java.lang.String" itemvalue="bottom-25" />
             <item index="42" class="java.lang.String" itemvalue="mb-4" />
             <item index="43" class="java.lang.String" itemvalue="z-9" />
+            <item index="44" class="java.lang.String" itemvalue="overflow-hidden" />
+            <item index="45" class="java.lang.String" itemvalue="mb-1" />
+            <item index="46" class="java.lang.String" itemvalue="font-semibild" />
+            <item index="47" class="java.lang.String" itemvalue="text-12" />
+            <item index="48" class="java.lang.String" itemvalue="text-light-400" />
+            <item index="49" class="java.lang.String" itemvalue="bg-dark-400" />
+            <item index="50" class="java.lang.String" itemvalue="border-b" />
+            <item index="51" class="java.lang.String" itemvalue="border-light-200" />
+            <item index="52" class="java.lang.String" itemvalue="opacity-50" />
+            <item index="53" class="java.lang.String" itemvalue="bottom-28" />
+            <item index="54" class="java.lang.String" itemvalue="px-2" />
+            <item index="55" class="java.lang.String" itemvalue="top-5" />
           </list>
         </value>
       </option>

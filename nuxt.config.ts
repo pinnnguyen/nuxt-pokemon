@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/styles/main.css',
-    // '~/assets/styles/global.css',
+    '~/assets/styles/global.css',
   ],
   experimental: {
     payloadExtraction: false,

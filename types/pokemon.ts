@@ -1,4 +1,4 @@
-export type StatsKey = 'p_attack' | 'm_attack' | 'critical' | 'speed' | 'p_defense' | 'm_defense' | 'hp'
+export type StatsKey = 'p_attack' | 'm_attack' | 'critical' | 'speed' | 'p_def' | 'm_def' | 'hp' | 'skill_atk' | 'skill_def' | 'mp_restoremỹ'
 export interface BaseStats {
   main: number
   total: number
@@ -38,6 +38,7 @@ export interface Pokemon {
     gen?: number
     pokedex: number
     role?: string
+    point?: number
   }
   stats: {
     [key in StatsKey | string]: BaseStats

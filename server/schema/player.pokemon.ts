@@ -34,6 +34,7 @@ export const PlayerPokemonSchema = mongoose.model('PlayerPokemonSchema', schema,
 export const rollOnePokemonById = async (pokedex?: number) => {
   const poi = await PokemonInfoSchema.findOne({ 'info.pokedex': pokedex })
   const stats = poi?.stats
+  const cp = 0
 
   const nStats: any = {}
   for (const stat in stats) {
@@ -65,6 +66,8 @@ export const rollOnePokemonById = async (pokedex?: number) => {
       gen: poi?.info.gen,
       pokedex: poi?.info.pokedex,
       role: poi?.info.role,
+      cp: 0,
+      point: rollPokeLevel * 3,
     },
     training: {
       exp: 0,

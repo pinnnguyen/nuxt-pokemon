@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-const toggleMyPokemon = useState('toggleMyPokemon', () => false)
-const ontoggleMyPokemon = () => {
-  toggleMyPokemon.value = true
-}
+const { setShouldPoList } = useControlStore()
 </script>
 
 <template>
@@ -38,14 +35,14 @@ const ontoggleMyPokemon = () => {
       </span>
     </div>
   </div>
-  <div bg-white sticky bottom-0 w-full text-xl flex items-center justify-around rounded-t-3xl text-14 font-semibold h-25>
+  <div bg-dark-400 text-light-400 sticky bottom-0 w-full text-xl flex items-center justify-around rounded-t-3xl text-14 font-semibold h-25>
     <div class="flex flex-col justify-center items-center pt-2">
       <nuxt-img format="webp" class="w-18" src="/icons/pokemon_catch.png" />
       <span class="">
         Mở
       </span>
     </div>
-    <div class="flex flex-col justify-center items-center pt-2" @click.stop="ontoggleMyPokemon">
+    <div class="flex flex-col justify-center items-center pt-2" @click.stop="setShouldPoList(true)">
       <nuxt-img format="webp" class="w-18" src="/icons/pokemon_list.png" />
       <span class="">
         Pokemon
