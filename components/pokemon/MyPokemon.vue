@@ -11,7 +11,7 @@ const onSelected = (pokemon) => {
 
 <template>
   <van-popup v-model:show="togglePokemonDetail" class="!bg-black">
-    <div class="w-[60vh] m-auto bg-white p-4 border-4 border-[#9C7A54]">
+    <div class="m-auto bg-white p-4 border-4 border-[#9C7A54]">
       <div mb-2>
         <div class="flex justify-around">
           <div>
@@ -22,15 +22,15 @@ const onSelected = (pokemon) => {
               {{ selectedPokemon.info.name }}
             </p>
           </div>
-          <div class="w-[80px] h-[80px] bg-black rounded">
-            <nuxt-img src="/level/0.png" />
+          <div class="w-14 h-14 bg-black rounded">
+            <nuxt-img w-full h-full object-cover src="/level/0.png" />
           </div>
-          <div flex flex-col items-end gap-1>
+          <div flex flex-col items-end gap-1 mb-1>
             <p flex gap-1>
-              <nuxt-img v-for="element in selectedPokemon.element" :key="element" class="w-[35px] h-[35px]" format="webp" :src="`/elements/${element}.png`" />
+              <nuxt-img v-for="element in selectedPokemon.element" :key="element" class="w-8 h-8" format="webp" :src="`/elements/${element}.png`" />
             </p>
             <p>
-              <nuxt-img class="w-[35px] h-[35]px" format="webp" :src="`/elements/${selectedPokemon.info.role}.png`" />
+              <nuxt-img class="w-8 h-8" format="webp" :src="`/elements/${selectedPokemon.info.role}.png`" />
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ const onSelected = (pokemon) => {
             <div flex justify-between>
               <div>
                 <span>
-                  LEVEL 48
+                  LEVEL {{ selectedPokemon?.training?.level }}
                 </span>
                 <span class="text-[#aaa]">
                   (Tiến hóa)
@@ -62,7 +62,7 @@ const onSelected = (pokemon) => {
         </div>
       </div>
     </div>
-    <div class="w-full bg-white p-4 border-4 border-[#9C7A54] mt-4">
+    <div class="bg-white p-4 border-4 border-[#9C7A54] mt-4">
       <div v-for="i in 10" flex items-center justify-between w-full h-12 text-16>
         <div flex>
           <span mr-1>Sát thương vật lý</span>

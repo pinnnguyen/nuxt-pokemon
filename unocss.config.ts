@@ -4,7 +4,6 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -24,12 +23,12 @@ export default defineConfig({
       },
     }),
     presetTypography(),
-    presetWebFonts({
-      provider: 'none',
-      fonts: {
-        script: 'Homemade Apple',
-      },
-    }),
+    // presetWebFonts({
+    //   provider: 'none',
+    //   fonts: {
+    //     script: 'Homemade Apple',
+    //   },
+    // }),
   ],
   transformers: [
     transformerDirectives(),

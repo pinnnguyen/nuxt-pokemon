@@ -1,4 +1,4 @@
-import { PlayerPokemonSchema, PlayerSchema, PokemonInfoSchema, rollOnePokemon } from '~/server/schema'
+import { PlayerPokemonSchema, PlayerSchema, PokemonInfoSchema, rollOnePokemonById } from '~/server/schema'
 import { getServerSession } from '#auth'
 
 interface CreateRoleBody {
@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   const pokemonInfoData = await PokemonInfoSchema.findOne({ 'info.pokedex': body.pokedex })
   const randomName = (Math.random() + 1).toString(36).substring(7)
 
-  const pokeRoll = await rollOnePokemon(pokemonInfoData?.info?.pokedex)
+  const pokeRoll = await rollOnePokemonById(pokemonInfoData?.info?.pokedex)
   const createPlayer = await PlayerSchema.create({
     sid: (session as any).sid,
     username: session?.user?.email,

@@ -18,7 +18,7 @@ const handleCreateFigure = async () => {
 
 <template>
   <div class="h-full w-full absolute top-0">
-    <nuxt-img class="" src="/background/catch.png" format="webp" />
+    <nuxt-img h-full src="/background/catch.png" format="webp" />
     <div class="absolute top-[10%] w-full text-center text-white">
       <h1 class="text-xl uppercase">
         Pokemon

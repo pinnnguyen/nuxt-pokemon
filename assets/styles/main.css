@@ -27,14 +27,20 @@
 }
 
 #__nuxt, body, html {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    margin: auto;
     position: relative;
+    max-width: calc(100vh * 0.7);
+    overflow: hidden;
 }
 
 body {
-    font-family: Montserrat !important;
+    font-family: Montserrat, serif !important;
+    background-color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    user-select: none;
 }
 
 .transform-center {
@@ -85,4 +91,47 @@ body .button-no {
     color: #A06E45;
     padding: 0 15px;
     font-weight: 600;
+}
+
+
+@media (max-height: 850px) {
+    #__nuxt {
+        zoom: 0.8;
+        -webkit-text-size-adjust: auto;
+    }
+}
+
+@media (max-width: 599px) {
+    #__nuxt {
+        zoom: 0.8;
+        -webkit-text-size-adjust: auto;
+        width: 100%;
+    }
+
+    body .content .login {
+        width: 100%;
+    }
+
+    .frame_content .frame_content_div .pokemon_detail_screen .pokemon_stats {
+        height: calc(100% - 415px);
+    }
+
+    .button_center_svg {
+        font-size: 20px;
+    }
+
+    .frame_content .frame_content_div {
+    }
+}
+
+@media (max-width: 499px) {
+    #__nuxt {
+        zoom: 0.65;
+    }
+}
+
+@media (max-height: 649px) {
+    #__nuxt {
+        zoom: 0.65;
+    }
 }

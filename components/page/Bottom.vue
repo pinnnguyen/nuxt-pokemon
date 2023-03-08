@@ -38,7 +38,7 @@ const ontoggleMyPokemon = () => {
       </span>
     </div>
   </div>
-  <div bg-white sticky bottom-0 w-full text-xl flex items-center justify-around rounded-t-3xl text-14 font-bold h-25>
+  <div bg-white sticky bottom-0 w-full text-xl flex items-center justify-around rounded-t-3xl text-14 font-semibold h-25>
     <div class="flex flex-col justify-center items-center pt-2">
       <nuxt-img format="webp" class="w-18" src="/icons/pokemon_catch.png" />
       <span class="">
