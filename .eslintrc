@@ -1,0 +1,10 @@
+{
+  "extends": "@antfu",
+//  "ignorePatterns": ["!pages/public"],
+  "rules": {
+    "vue/no-restricted-syntax":["error", {
+      "selector": "VElement[name='a']",
+      "message": "Use NuxtLink instead."
+    }]
+  }
+}

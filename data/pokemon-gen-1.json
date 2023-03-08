@@ -1,0 +1,1210 @@
+[
+  {
+    "pokedex": 1,
+    "name": "Bulbasaur",
+    "element": "grass\/poison",
+    "total_point": 318,
+    "role": "balance",
+    "buff": 0
+  },
+  {
+    "pokedex": 2,
+    "name": "Ivysaur",
+    "element": "grass\/poison",
+    "total_point": 405,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 3,
+    "name": "Venusaur",
+    "element": "grass\/poison",
+    "total_point": 525,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 4,
+    "name": "Charmander",
+    "element": "fire",
+    "total_point": 309,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 5,
+    "name": "Charmeleon",
+    "element": "fire",
+    "total_point": 405,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 6,
+    "name": "Charizard",
+    "element": "fire\/flying",
+    "total_point": 534,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 7,
+    "name": "Squirtle",
+    "element": "water",
+    "total_point": 314,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 8,
+    "name": "Wartortle",
+    "element": "water",
+    "total_point": 405,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 9,
+    "name": "Blastoise",
+    "element": "water",
+    "total_point": 530,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 10,
+    "name": "Caterpie",
+    "element": "bug",
+    "total_point": 195,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 11,
+    "name": "Metapod",
+    "element": "bug",
+    "total_point": 205,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 12,
+    "name": "Butterfree",
+    "element": "bug\/flying",
+    "total_point": 395,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 13,
+    "name": "Weedle",
+    "element": "bug\/poison",
+    "total_point": 195,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 14,
+    "name": "Kakuna",
+    "element": "bug\/poison",
+    "total_point": 205,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 15,
+    "name": "Beedrill",
+    "element": "bug\/poison",
+    "total_point": 395,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 16,
+    "name": "Pidgey",
+    "element": "normal\/flying",
+    "total_point": 251,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 17,
+    "name": "Pidgeotto",
+    "element": "normal\/flying",
+    "total_point": 349,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 18,
+    "name": "Pidgeot",
+    "element": "normal\/flying",
+    "total_point": 479,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 19,
+    "name": "Rattata",
+    "element": "normal",
+    "total_point": 253,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 20,
+    "name": "Raticate",
+    "element": "normal",
+    "total_point": 413,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 21,
+    "name": "Spearow",
+    "element": "normal\/flying",
+    "total_point": 262,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 22,
+    "name": "Fearow",
+    "element": "normal\/flying",
+    "total_point": 442,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 23,
+    "name": "Ekans",
+    "element": "poison",
+    "total_point": 288,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 24,
+    "name": "Arbok",
+    "element": "poison",
+    "total_point": 448,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 25,
+    "name": "Pikachu",
+    "element": "electric",
+    "total_point": 320,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 26,
+    "name": "Raichu",
+    "element": "electric",
+    "total_point": 485,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 27,
+    "name": "Sandshrew",
+    "element": "ground",
+    "total_point": 300,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 28,
+    "name": "Sandslash",
+    "element": "ground",
+    "total_point": 450,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 29,
+    "name": "Nidoran\u2640",
+    "element": "poison",
+    "total_point": 275,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 30,
+    "name": "Nidorina",
+    "element": "poison",
+    "total_point": 365,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 31,
+    "name": "Nidoqueen",
+    "element": "poison\/ground",
+    "total_point": 505,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 32,
+    "name": "Nidoran\u2642",
+    "element": "poison",
+    "total_point": 273,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 33,
+    "name": "Nidorino",
+    "element": "poison",
+    "total_point": 365,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 34,
+    "name": "Nidoking",
+    "element": "poison\/ground",
+    "total_point": 505,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 35,
+    "name": "Clefairy",
+    "element": "fairy",
+    "total_point": 323,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 36,
+    "name": "Clefable",
+    "element": "fairy",
+    "total_point": 483,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 37,
+    "name": "Vulpix",
+    "element": "fire",
+    "total_point": 299,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 38,
+    "name": "Ninetales",
+    "element": "fire",
+    "total_point": 505,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 39,
+    "name": "Jigglypuff",
+    "element": "normal\/fairy",
+    "total_point": 270,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 40,
+    "name": "Wigglytuff",
+    "element": "normal\/fairy",
+    "total_point": 435,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 41,
+    "name": "Zubat",
+    "element": "poison\/flying",
+    "total_point": 245,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 42,
+    "name": "Golbat",
+    "element": "poison\/flying",
+    "total_point": 455,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 43,
+    "name": "Oddish",
+    "element": "grass\/poison",
+    "total_point": 320,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 44,
+    "name": "Gloom",
+    "element": "grass\/poison",
+    "total_point": 395,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 45,
+    "name": "Vileplume",
+    "element": "grass\/poison",
+    "total_point": 490,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 46,
+    "name": "Paras",
+    "element": "bug\/grass",
+    "total_point": 285,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 47,
+    "name": "Parasect",
+    "element": "bug\/grass",
+    "total_point": 405,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 48,
+    "name": "Venonat",
+    "element": "bug\/poison",
+    "total_point": 305,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 49,
+    "name": "Venomoth",
+    "element": "bug\/poison",
+    "total_point": 450,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 50,
+    "name": "Diglett",
+    "element": "ground",
+    "total_point": 265,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 51,
+    "name": "Dugtrio",
+    "element": "ground",
+    "total_point": 425,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 52,
+    "name": "Meowth",
+    "element": "normal",
+    "total_point": 290,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 53,
+    "name": "Persian",
+    "element": "normal",
+    "total_point": 440,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 54,
+    "name": "Psyduck",
+    "element": "water",
+    "total_point": 320,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 55,
+    "name": "Golduck",
+    "element": "water",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 56,
+    "name": "Mankey",
+    "element": "fighting",
+    "total_point": 305,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 57,
+    "name": "Primeape",
+    "element": "fighting",
+    "total_point": 455,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 58,
+    "name": "Growlithe",
+    "element": "fire",
+    "total_point": 350,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 59,
+    "name": "Arcanine",
+    "element": "fire",
+    "total_point": 555,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 60,
+    "name": "Poliwag",
+    "element": "water",
+    "total_point": 300,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 61,
+    "name": "Poliwhirl",
+    "element": "water",
+    "total_point": 385,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 62,
+    "name": "Poliwrath",
+    "element": "water\/fighting",
+    "total_point": 510,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 63,
+    "name": "Abra",
+    "element": "psychic",
+    "total_point": 310,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 64,
+    "name": "Kadabra",
+    "element": "psychic",
+    "total_point": 400,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 65,
+    "name": "Alakazam",
+    "element": "psychic",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 66,
+    "name": "Machop",
+    "element": "fighting",
+    "total_point": 305,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 67,
+    "name": "Machoke",
+    "element": "fighting",
+    "total_point": 405,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 68,
+    "name": "Machamp",
+    "element": "fighting",
+    "total_point": 505,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 69,
+    "name": "Bellsprout",
+    "element": "grass\/poison",
+    "total_point": 300,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 70,
+    "name": "Weepinbell",
+    "element": "grass\/poison",
+    "total_point": 390,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 71,
+    "name": "Victreebel",
+    "element": "grass\/poison",
+    "total_point": 490,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 72,
+    "name": "Tentacool",
+    "element": "water\/poison",
+    "total_point": 335,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 73,
+    "name": "Tentacruel",
+    "element": "water\/poison",
+    "total_point": 515,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 74,
+    "name": "Geodude",
+    "element": "rock\/ground",
+    "total_point": 300,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 75,
+    "name": "Graveler",
+    "element": "rock\/ground",
+    "total_point": 390,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 76,
+    "name": "Golem",
+    "element": "rock\/ground",
+    "total_point": 495,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 77,
+    "name": "Ponyta",
+    "element": "fire",
+    "total_point": 410,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 78,
+    "name": "Rapidash",
+    "element": "fire",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 79,
+    "name": "Slowpoke",
+    "element": "water\/psychic",
+    "total_point": 315,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 80,
+    "name": "Slowbro",
+    "element": "water\/psychic",
+    "total_point": 490,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 81,
+    "name": "Magnemite",
+    "element": "electric\/steel",
+    "total_point": 325,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 82,
+    "name": "Magneton",
+    "element": "electric\/steel",
+    "total_point": 465,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 83,
+    "name": "Farfetchd",
+    "element": "normal\/flying",
+    "total_point": 377,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 84,
+    "name": "Doduo",
+    "element": "normal\/flying",
+    "total_point": 310,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 85,
+    "name": "Dodrio",
+    "element": "normal\/flying",
+    "total_point": 470,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 86,
+    "name": "Seel",
+    "element": "water",
+    "total_point": 325,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 87,
+    "name": "Dewgong",
+    "element": "water\/ice",
+    "total_point": 475,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 88,
+    "name": "Grimer",
+    "element": "poison",
+    "total_point": 325,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 89,
+    "name": "Muk",
+    "element": "poison",
+    "total_point": 500,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 90,
+    "name": "Shellder",
+    "element": "water",
+    "total_point": 305,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 91,
+    "name": "Cloyster",
+    "element": "water\/ice",
+    "total_point": 525,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 92,
+    "name": "Gastly",
+    "element": "ghost\/poison",
+    "total_point": 310,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 93,
+    "name": "Haunter",
+    "element": "ghost\/poison",
+    "total_point": 405,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 94,
+    "name": "Gengar",
+    "element": "ghost\/poison",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 95,
+    "name": "Onix",
+    "element": "rock\/ground",
+    "total_point": 385,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 96,
+    "name": "Drowzee",
+    "element": "psychic",
+    "total_point": 328,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 97,
+    "name": "Hypno",
+    "element": "psychic",
+    "total_point": 483,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 98,
+    "name": "Krabby",
+    "element": "water",
+    "total_point": 325,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 99,
+    "name": "Kingler",
+    "element": "water",
+    "total_point": 475,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 100,
+    "name": "Voltorb",
+    "element": "electric",
+    "total_point": 330,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 101,
+    "name": "Electrode",
+    "element": "electric",
+    "total_point": 490,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 102,
+    "name": "Exeggcute",
+    "element": "grass\/psychic",
+    "total_point": 325,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 103,
+    "name": "Exeggutor",
+    "element": "grass\/psychic",
+    "total_point": 530,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 104,
+    "name": "Cubone",
+    "element": "ground",
+    "total_point": 320,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 105,
+    "name": "Marowak",
+    "element": "ground",
+    "total_point": 425,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 106,
+    "name": "Hitmonlee",
+    "element": "fighting",
+    "total_point": 455,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 107,
+    "name": "Hitmonchan",
+    "element": "fighting",
+    "total_point": 455,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 108,
+    "name": "Lickitung",
+    "element": "normal",
+    "total_point": 385,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 109,
+    "name": "Koffing",
+    "element": "poison",
+    "total_point": 340,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 110,
+    "name": "Weezing",
+    "element": "poison",
+    "total_point": 490,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 111,
+    "name": "Rhyhorn",
+    "element": "ground\/rock",
+    "total_point": 345,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 112,
+    "name": "Rhydon",
+    "element": "ground\/rock",
+    "total_point": 485,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 113,
+    "name": "Chansey",
+    "element": "normal",
+    "total_point": 450,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 114,
+    "name": "Tangela",
+    "element": "grass",
+    "total_point": 435,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 115,
+    "name": "Kangaskhan",
+    "element": "normal",
+    "total_point": 490,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 116,
+    "name": "Horsea",
+    "element": "water",
+    "total_point": 295,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 117,
+    "name": "Seadra",
+    "element": "water",
+    "total_point": 440,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 118,
+    "name": "Goldeen",
+    "element": "water",
+    "total_point": 320,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 119,
+    "name": "Seaking",
+    "element": "water",
+    "total_point": 450,
+    "role": "balance",
+    "buff": 0
+  },
+  {
+    "pokedex": 120,
+    "name": "Staryu",
+    "element": "water",
+    "total_point": 340,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 121,
+    "name": "Starmie",
+    "element": "water\/psychic",
+    "total_point": 520,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 122,
+    "name": "Mr. Mime",
+    "element": "psychic\/fairy",
+    "total_point": 460,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 123,
+    "name": "Scyther",
+    "element": "bug\/flying",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 124,
+    "name": "Jynx",
+    "element": "ice\/psychic",
+    "total_point": 455,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 125,
+    "name": "Electabuzz",
+    "element": "electric",
+    "total_point": 490,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 126,
+    "name": "Magmar",
+    "element": "fire",
+    "total_point": 495,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 127,
+    "name": "Pinsir",
+    "element": "bug",
+    "total_point": 500,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 128,
+    "name": "Tauros",
+    "element": "normal",
+    "total_point": 490,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 129,
+    "name": "Magikarp",
+    "element": "water",
+    "total_point": 200,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 130,
+    "name": "Gyarados",
+    "element": "water\/flying",
+    "total_point": 540,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 131,
+    "name": "Lapras",
+    "element": "water\/ice",
+    "total_point": 535,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 132,
+    "name": "Ditto",
+    "element": "normal",
+    "total_point": 288,
+    "role": "balance",
+    "buff": 0
+  },
+  {
+    "pokedex": 133,
+    "name": "Eevee",
+    "element": "normal",
+    "total_point": 325,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 134,
+    "name": "Vaporeon",
+    "element": "water",
+    "total_point": 525,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 135,
+    "name": "Jolteon",
+    "element": "electric",
+    "total_point": 525,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 136,
+    "name": "Flareon",
+    "element": "fire",
+    "total_point": 525,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 137,
+    "name": "Porygon",
+    "element": "normal",
+    "total_point": 395,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 138,
+    "name": "Omanyte",
+    "element": "rock\/water",
+    "total_point": 355,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 139,
+    "name": "Omastar",
+    "element": "rock\/water",
+    "total_point": 495,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 140,
+    "name": "Kabuto",
+    "element": "rock\/water",
+    "total_point": 355,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 141,
+    "name": "Kabutops",
+    "element": "rock\/water",
+    "total_point": 495,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 142,
+    "name": "Aerodactyl",
+    "element": "rock\/flying",
+    "total_point": 515,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 143,
+    "name": "Snorlax",
+    "element": "normal",
+    "total_point": 540,
+    "role": "tank",
+    "buff": 0
+  },
+  {
+    "pokedex": 144,
+    "name": "Articuno",
+    "element": "ice\/flying",
+    "total_point": 580,
+    "role": "tank",
+    "buff": 10
+  },
+  {
+    "pokedex": 145,
+    "name": "Zapdos",
+    "element": "electric\/flying",
+    "total_point": 580,
+    "role": "damage",
+    "buff": 10
+  },
+  {
+    "pokedex": 146,
+    "name": "Moltres",
+    "element": "fire\/flying",
+    "total_point": 580,
+    "role": "damage",
+    "buff": 10
+  },
+  {
+    "pokedex": 147,
+    "name": "Dratini",
+    "element": "dragon",
+    "total_point": 300,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 148,
+    "name": "Dragonair",
+    "element": "dragon",
+    "total_point": 420,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 149,
+    "name": "Dragonite",
+    "element": "dragon\/flying",
+    "total_point": 600,
+    "role": "damage",
+    "buff": 0
+  },
+  {
+    "pokedex": 150,
+    "name": "Mewtwo",
+    "element": "psychic",
+    "total_point": 680,
+    "role": "damage",
+    "buff": 10
+  },
+  {
+    "pokedex": 151,
+    "name": "Mew",
+    "element": "psychic",
+    "total_point": 600,
+    "role": "balance",
+    "buff": 10
+  }
+]

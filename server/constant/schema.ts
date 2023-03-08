@@ -1,0 +1,5 @@
+export const PLAYER_POKEMON_SCHEMA = 'gl_player_pokemons'
+export const PLAYER_SCHEMA = 'gl_players'
+export const POKEMON_INFO_SCHEMA = 'gl_pokemon_info'
+export const POKEMON_SCHEMA = 'gl_pokemons'
+export const USER_SCHEMA = 'users'

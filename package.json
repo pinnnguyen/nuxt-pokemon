@@ -1,0 +1,37 @@
+{
+  "name": "@pokemon/h5",
+  "description": "Nuxt - Pokemon H5",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --cache ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.36.0",
+    "@nuxt/image-edge": "1.0.0-27968280.9739e4d",
+    "@pinia/nuxt": "^0.4.7",
+    "@sidebase/nuxt-auth": "^0.4.3",
+    "@unocss/nuxt": "^0.50.4",
+    "@vant/nuxt": "^1.0.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "eslint": "^8.35.0",
+    "lint-staged": "^13.1.2",
+    "mongoose": "^7.0.1",
+    "nuxt": "^3.2.3",
+    "nuxt-icon": "^0.3.2",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5",
+    "vant": "^4.1.0"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "dependencies": {
+    "next-auth": "4.18.8"
+  }
+}

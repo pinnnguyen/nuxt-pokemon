@@ -1,0 +1,69 @@
+<script setup lang="ts">
+// import { useSoundHomeEvent } from '#imports'
+// import { useSound } from '@vueuse/sound'
+// import { shouldTupo } from '~/server/common'
+
+const { playerInfo } = storeToRefs(usePlayerStore())
+definePageMeta({
+  middleware: ['game'],
+  auth: false,
+})
+
+// onMounted(async () => {
+//   setTimeout(async () => {
+//     await useSoundHomeEvent().play()
+//   }, 10000)
+// })
+</script>
+
+<template>
+  <div>
+    <NuxtImg src="/background/home.png" />
+    <div class="absolute transform-center w-full" style="zoom: 0.7">
+      <div class="flex items-center justify-center mb-4 gap-2">
+        <div class="relative">
+          <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />
+          <NuxtImg
+            v-if="playerInfo.pokemons[0]" class="absolute transform-center w-12 pb-4"
+            :src="`/character/${playerInfo.pokemons[0].pokedex}.gif`"
+          />
+        </div>
+        <div class="relative">
+          <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />
+          <NuxtImg
+            v-if="playerInfo.pokemons[1]" class="absolute transform-center w-12 pb-4"
+            :src="`/character/${playerInfo.pokemons[1].pokedex}.gif`"
+          />
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <div class="relative">
+          <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />
+          <NuxtImg
+            v-if="playerInfo.pokemons[1]" class="absolute transform-center w-12 pb-4"
+            :src="`/character/${playerInfo.pokemons[1].pokedex}.gif`"
+          />
+        </div>
+        <div class="relative">
+          <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />
+          <NuxtImg
+            v-if="playerInfo.pokemons[1]" class="absolute transform-center w-12 pb-4"
+            :src="`/character/${playerInfo.pokemons[1].pokedex}.gif`"
+          />
+        </div>
+        <div class="relative">
+          <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />
+          <NuxtImg
+            v-if="playerInfo.pokemons[1]" class="absolute transform-center w-12 pb-4"
+            :src="`/character/${playerInfo.pokemons[1].pokedex}.gif`"
+          />
+        </div>
+      </div>
+      <div class="w-full text-center mt-4">
+        <button class="button-yes">
+          Huấn luyện
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
