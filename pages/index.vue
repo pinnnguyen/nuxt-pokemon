@@ -17,9 +17,9 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <NuxtImg src="/background/home.png" />
-    <div class="absolute transform-center w-full" style="zoom: 0.7">
+  <div h-full>
+    <NuxtImg absolute w-full h-full src="/background/home.png" />
+    <div absolute class="transform-center" w-full>
       <div class="flex items-center justify-center mb-4 gap-2">
         <div class="relative">
           <NuxtImg format="webp" class="w-[105px]" src="/background/pokemon_stand.png" />

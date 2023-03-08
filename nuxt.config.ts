@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vant/nuxt',
     '@nuxt/image-edge',
+    '@nuxt/devtools',
   ],
   auth: {
     origin: process.env.ORIGIN_URL,
@@ -39,7 +40,8 @@ export default defineNuxtConfig({
     // '~/assets/styles/global.css',
   ],
   experimental: {
-    reactivityTransform: true,
+    payloadExtraction: false,
+    inlineSSRStyles: false,
   },
   pinia: {
     autoImports: ['storeToRefs', 'acceptHMRUpdate', 'defineStore'],
