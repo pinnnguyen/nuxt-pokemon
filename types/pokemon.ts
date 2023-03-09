@@ -1,4 +1,4 @@
-export type StatsKey = 'p_attack' | 'm_attack' | 'critical' | 'speed' | 'p_def' | 'm_def' | 'hp' | 'skill_atk' | 'skill_def' | 'mp_restoremỹ'
+export type StatsKey = 'p_attack' | 'm_attack' | 'critical' | 'speed' | 'p_def' | 'm_def' | 'hp' | 'skill_atk' | 'skill_def' | 'mp_restore'
 export interface BaseStats {
   main: number
   total: number

@@ -33,6 +33,10 @@ export default defineEventHandler(async (event) => {
     pokedex: pokeRoll.info.pokedex,
     ...pokeRoll,
   })
+  // return {
+  //   player: {},
+  //   pokemons: {},
+  // }
 
   return {
     player: createPlayer,

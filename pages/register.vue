@@ -33,7 +33,7 @@ const handleRegister = async () => {
         <!--        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"> -->
         <!--          Huấn luyện pokemon theo cách của bạn -->
         <!--        </h1> -->
-        <div class="mt-2">
+        <div class="mt-2 text-center">
           <input v-model="email" class="form-input" required type="email" placeholder="Email">
           <input v-model="password" class="form-input" required type="password" placeholder="Password">
           <input v-model="rePassword" class="form-input" required type="password" placeholder="Nhập lại mật khẩu">

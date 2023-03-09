@@ -109,3 +109,5 @@ export function fromNow(to: number, now = +new Date()) {
   else
     return `${Math.round(elapsed / msPerYear)} Năm trước`
 }
+
+export const cloneDeep = <T>(data: T): T => JSON.parse(JSON.stringify(data))

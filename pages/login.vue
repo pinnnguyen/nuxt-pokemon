@@ -29,7 +29,7 @@ const handleLogin = async () => {
       <!--      <h1 class="text-lg"> -->
       <!--        Huấn luyện pokemon theo cách của bạn -->
       <!--      </h1> -->
-      <div class="mt-2">
+      <div class="mt-2 text-center">
         <input v-model="email" class="form-input" placeholder="Email">
         <input v-model="password" class="form-input" placeholder="Password">
       </div>

@@ -25,3 +25,16 @@ export const STATS_LEVEL_BONUS: Record<StatsKey, number> = {
   skill_def: 4,
   mp_restore: 0.19,
 }
+
+export const STATS_TO_CP: Record<string, number> = {
+  p_attack: 1.4,
+  m_attack: 1.4,
+  critical: 2,
+  speed: 2,
+  hp: 0.2,
+  m_def: 0.8,
+  p_def: 0.8,
+  skill_atk: 0.8,
+  skill_def: 0.8,
+  mp_restore: 2,
+}

@@ -5,33 +5,39 @@ const { setShouldPoList } = useControlStore()
 
 const selectedPokemon = ref()
 const show = ref(false)
-const onSelected = (pokemon) => {
-  selectedPokemon.value = pokemon
+const onSelected = async (pokedex: number) => {
+  selectedPokemon.value = await $fetch('/api/pokemon/find', {
+    method: 'GET',
+    query: {
+      pokedex,
+    },
+  })
+
   show.value = true
 }
 </script>
 
 <template>
   <van-popup v-model:show="show" class="!bg-black">
-    <div border-b border-light-200 relative>
-      <div class="w-[60vh] m-auto bg-dark-400 text-light-400 p-4 border-1 border-light-200">
+    <div relative p-4 bg-dark-400 text-light-400 border border-dark-100 rounded>
+      <div class="w-[60vh]">
         <div mb-2>
           <div flex justify-around mb-2>
             <div>
               <nuxt-img :src="`/character/${selectedPokemon.pokedex}.gif`" />
             </div>
             <div flex flex-col gap-2>
-              <p text-16 text-blue-500 font-extrabold>
+              <p text-18 text-blue-500 font-extrabold>
                 {{ selectedPokemon.info.name }}
               </p>
-              <p>
-                CP {{ selectedPokemon.info.cp ?? 0 }} (Hoàn mỹ {{ selectedPokemon.info.perfect ?? 0 }}%)
-              </p>
+              <div>
+                <span font-bold>CP {{ Math.round(selectedPokemon.info.cp) ?? 0 }}</span> (Hoàn mỹ {{ Math.round(selectedPokemon.info.perfect) ?? 0 }}%)
+              </div>
               <div flex items-center gap-1>
-                <div w-4 h-4 rounded flex items-center justify-center font-extrabold>
+                <div w-4 h-4 bg-light-200 text-dark-400 rounded flex items-center justify-center font-extrabold>
                   <Icon name="ic:baseline-plus" size="20" />
                 </div>
-                {{ selectedPokemon.info.point ?? 0 }}
+                <span font-bold>{{ selectedPokemon.info.point ?? 0 }}</span>
                 <span text-blue-400>(Reset)</span>
               </div>
             </div>
@@ -40,10 +46,10 @@ const onSelected = (pokemon) => {
             </div>
             <div flex flex-col items-end gap-1 mb-1>
               <p flex gap-1>
-                <nuxt-img v-for="element in selectedPokemon.element" :key="element" class="w-8 h-8" format="webp" :src="`/elements/${element}.png`" />
+                <nuxt-img v-for="element in selectedPokemon.element" :key="element" class="w-6 h-6" format="webp" :src="`/elements/${element}.png`" />
               </p>
               <p>
-                <nuxt-img class="w-8 h-8" format="webp" :src="`/elements/${selectedPokemon.info.role}.png`" />
+                <nuxt-img class="w-6 h-6" format="webp" :src="`/elements/${selectedPokemon.info.role}.png`" />
               </p>
             </div>
           </div>
@@ -63,7 +69,7 @@ const onSelected = (pokemon) => {
                 </div>
               </div>
               <div class="bg-dark-700 rounded-3xl h-4">
-                <div class="bg-[#FCD95F]" rounded-3xl h-4 w-10 />
+                <div class="bg-[#FCD95F]" rounded-3xl h-4 w-0 />
               </div>
             </div>
             <div flex w-25>
@@ -75,7 +81,10 @@ const onSelected = (pokemon) => {
           </div>
         </div>
       </div>
-      <div class="h-[80vh] scrollbar-hide overflow-auto w-[60vh] text-light-400 bg-dark-400 p-4 border-1 border-light-200 mt-4">
+      <div class="h-[80vh] scrollbar-hide overflow-auto w-[60vh]">
+        <Line text-16 my-2>
+          Thuộc tính cơ bản
+        </Line>
         <div
           v-for="(stat, key) in selectedPokemon.stats" :key="key"
           flex items-center justify-between w-full h-12 text-16
@@ -85,12 +94,48 @@ const onSelected = (pokemon) => {
             <span opacity-50>{{ stat?.quality }}</span>
           </div>
           <div flex items-center gap-1>
-            <span>{{ stat?.main + stat?.bonus?.level }}</span>
+            <span>{{ stat?.total }}</span>
             <NuxtImg mr-1 h-5 src="/common/pokemon_stats_right.png" />
             <div w-25 text-right flex items-center justify-end gap-2>
-              <span text-green-500>{{ (stat?.main + stat?.bonus?.level) + STATS_LEVEL_BONUS[key] }}</span>
+              <span text-green-500>{{ (stat?.total) + STATS_LEVEL_BONUS[key] }}</span>
               <span opacity-50>{{ stat?.level + 2 }}</span>
               <Icon name="ic:baseline-add-circle" size="26" />
+            </div>
+          </div>
+        </div>
+        <div flex justify-between mt-4>
+          <div text-16>
+            <div text-center mb-2>
+              TẤN CÔNG
+            </div>
+            <div v-for="(element, key) in selectedPokemon.element_bonus.attack" :key="key" flex items-center>
+              <div flex items-center gap-2 h-12>
+                <NuxtImg :src="`/elements/${key}.png`" format="webp" class="h-6" />
+                {{ element?.total ?? 0 }}%
+                <NuxtImg mr-1 h-5 src="/common/pokemon_stats_right.png" />
+              </div>
+              <div text-right flex items-center justify-end gap-2>
+                <span text-green-500>{{ element?.total ?? 10 }}%</span>
+                <span opacity-50>{{ element?.level + 6 }}</span>
+                <Icon name="ic:baseline-add-circle" size="26" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div text-center mb-2>
+              PHÒNG THỦ
+            </div>
+            <div v-for="(element, key) in selectedPokemon.element_bonus.defend" :key="key" flex items-center>
+              <div flex items-center gap-2 h-12>
+                <NuxtImg :src="`/elements/${key}.png`" format="webp" class="h-6" />
+                {{ element?.total ?? 0 }}%
+                <NuxtImg mr-1 h-5 src="/common/pokemon_stats_right.png" />
+              </div>
+              <div text-right flex items-center justify-end gap-2>
+                <span text-green-500>{{ element?.total ?? 5 }}%</span>
+                <span opacity-50>{{ element?.level + 6 }}</span>
+                <Icon name="ic:baseline-add-circle" size="26" />
+              </div>
             </div>
           </div>
         </div>
@@ -107,7 +152,7 @@ const onSelected = (pokemon) => {
         <LazyPokemonFrame
           v-for="pokemon in pokemons"
           :key="pokemon._id" :pokemon="pokemon"
-          @click="onSelected(pokemon)"
+          @click="onSelected(pokemon.pokedex)"
         >
           <template #avatar>
             <NuxtImg
@@ -119,7 +164,7 @@ const onSelected = (pokemon) => {
             {{ pokemon.info.name }}
           </template>
           <template #cp>
-            CP {{ pokemon.info.cp ?? 0 }}
+            CP {{ Math.round(pokemon.info.cp) ?? 0 }}
           </template>
           <template #level>
             lv.{{ pokemon.training.level }}

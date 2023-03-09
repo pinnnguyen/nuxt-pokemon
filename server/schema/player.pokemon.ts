@@ -1,8 +1,9 @@
 import mongoose from 'mongoose'
 import { PLAYER_POKEMON_SCHEMA } from '~/server/constant'
-import { randomNumber, roundNumber } from '~/utils'
+import { cloneDeep, randomNumber, roundNumber } from '~/utils'
 import { PokemonInfoSchema } from '~/server/schema/pokemon.info'
 import type { Pokemon } from '~/types/pokemon'
+import { STATS_TO_CP } from '~/game-config'
 const ObjectId = mongoose.Types.ObjectId
 
 const schema = new mongoose.Schema<Pokemon>(
@@ -31,30 +32,61 @@ schema.index({ pokedex: -1 }, { unique: true })
 schema.index({ username: -1 })
 export const PlayerPokemonSchema = mongoose.model('PlayerPokemonSchema', schema, PLAYER_POKEMON_SCHEMA)
 
+export const formatPokemonInfo = async (pokemon: Pokemon) => {
+  const poke = cloneDeep(pokemon)
+
+  let newCP = 0
+  const nStats: any = {}
+  for (const stat in pokemon.stats) {
+    newCP += STATS_TO_CP[stat] * (pokemon.stats[stat].main + (pokemon.stats[stat].bonus.level * poke?.training?.level!))
+    pokemon.stats[stat].total = pokemon.stats[stat].main + (pokemon.stats[stat].bonus.level * poke?.training?.level!)
+    nStats[stat] = {
+      ...pokemon.stats[stat],
+    }
+  }
+
+  poke.stats = nStats
+  poke.info.cp = newCP
+  return poke
+}
 export const rollOnePokemonById = async (pokedex?: number) => {
   const poi = await PokemonInfoSchema.findOne({ 'info.pokedex': pokedex })
   const stats = poi?.stats
-  const cp = 0
+  let originCP = 0
+  let newCP = 0
 
   const nStats: any = {}
+  const rollPokeLevel = Math.round(randomNumber(1, 20))
+
+  // const i = 6
+  // const rate = 1.3
+  // console.log('result', 0.89 * 100 / 1.3)
+  // console.log('result', 6 * 62/; / 100)
+  //
   for (const stat in stats) {
-    const ran = Math.round(randomNumber(0.7, 1.3) * 100) / 100
+    const ran = Math.round(randomNumber(0.6, 1.3) * 100) / 100
     const main = (stats[stat].total * ran) / stats[stat].quality
+
+    const bonusLevelOrigin = stats[stat].bonus.level
+    const qualityRate = stats[stat].quality
+    const bonusQualityRate = ran * 100 / qualityRate
+    const bonusLevel = Math.round(bonusLevelOrigin * bonusQualityRate / 100)
+
+    originCP += STATS_TO_CP[stat] * stats[stat].total
+    newCP += STATS_TO_CP[stat] * (main + (bonusLevel * rollPokeLevel))
 
     nStats[stat] = {
       main: roundNumber(main, 2),
-      // total: roundNumber(main, 2),
       quality: ran,
       level: 1,
       bonus: {
-        level: 0,
+        level: bonusLevel,
       },
     }
   }
 
   const newSkill = poi?.skill
   newSkill!.level = Math.round(randomNumber(1, 10))
-  const rollPokeLevel = Math.round(randomNumber(1, 20))
 
   return {
     pokedex: poi?.info.pokedex,
@@ -66,7 +98,8 @@ export const rollOnePokemonById = async (pokedex?: number) => {
       gen: poi?.info.gen,
       pokedex: poi?.info.pokedex,
       role: poi?.info.role,
-      cp: 0,
+      cp: newCP,
+      perfect: newCP / originCP * 100,
       point: rollPokeLevel * 3,
     },
     training: {
