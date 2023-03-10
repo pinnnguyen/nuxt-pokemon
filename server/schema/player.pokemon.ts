@@ -3,16 +3,12 @@ import { PLAYER_POKEMON_SCHEMA } from '~/server/constant'
 import { cloneDeep, randomNumber, roundNumber } from '~/utils'
 import { PokemonInfoSchema } from '~/server/schema/pokemon.info'
 import type { Pokemon } from '~/types/pokemon'
-import { STATS_TO_CP } from '~/game-config'
-const ObjectId = mongoose.Types.ObjectId
+import { DEFAULT_EXP_LEVEL, statsToCP } from '~/game-config'
 
 const schema = new mongoose.Schema<Pokemon>(
   {
     _id: {
       type: String,
-      default() {
-        return new ObjectId().toString()
-      },
     },
     sid: String,
     pokedex: Number,
@@ -38,15 +34,19 @@ export const formatPokemonInfo = async (pokemon: Pokemon) => {
   let newCP = 0
   const nStats: any = {}
   for (const stat in pokemon.stats) {
-    newCP += STATS_TO_CP[stat] * (pokemon.stats[stat].main + (pokemon.stats[stat].bonus.level * poke?.training?.level!))
-    pokemon.stats[stat].total = pokemon.stats[stat].main + (pokemon.stats[stat].bonus.level * poke?.training?.level!)
+    newCP += statsToCP[stat] * (pokemon.stats[stat].main + (pokemon.stats[stat].bonus.level * poke?.training?.level!))
+    pokemon.stats[stat].total
+        = Math.round((pokemon.stats[stat].main
+        + (pokemon.stats[stat].bonus.level * poke?.training?.level!)
+        + (pokemon.stats[stat].bonus.point ?? 0)) * 100) / 100
+
     nStats[stat] = {
       ...pokemon.stats[stat],
     }
   }
 
   poke.stats = nStats
-  poke.info.cp = newCP
+  poke.info.cp = Math.round(newCP)
   return poke
 }
 export const rollOnePokemonById = async (pokedex?: number) => {
@@ -72,8 +72,8 @@ export const rollOnePokemonById = async (pokedex?: number) => {
     const bonusQualityRate = ran * 100 / qualityRate
     const bonusLevel = Math.round(bonusLevelOrigin * bonusQualityRate / 100)
 
-    originCP += STATS_TO_CP[stat] * stats[stat].total
-    newCP += STATS_TO_CP[stat] * (main + (bonusLevel * rollPokeLevel))
+    originCP += statsToCP[stat] * stats[stat].total
+    newCP += statsToCP[stat] * (main + (bonusLevel * rollPokeLevel))
 
     nStats[stat] = {
       main: roundNumber(main, 2),
@@ -105,6 +105,7 @@ export const rollOnePokemonById = async (pokedex?: number) => {
     training: {
       exp: 0,
       level: rollPokeLevel,
+      maxExp: rollPokeLevel * DEFAULT_EXP_LEVEL,
     },
     element_bonus: {
       defend: {

@@ -1,0 +1,553 @@
+[
+  {
+    "stats": {
+      "p_attack": {
+        "quality": 1,
+        "main": 180,
+        "total": 198,
+        "bonus": {
+          "level": 18
+        },
+        "level": 0
+      },
+      "m_attack": {
+        "quality": 1,
+        "main": 180,
+        "total": 198,
+        "bonus": {
+          "level": 18
+        },
+        "level": 0
+      },
+      "critical": {
+        "quality": 1,
+        "main": 6.5,
+        "total": 7.1,
+        "bonus": {
+          "level": 0.6
+        },
+        "level": 0
+      },
+      "speed": {
+        "quality": 1,
+        "main": 500,
+        "total": 0.91,
+        "bonus": {
+          "level": 50
+        },
+        "level": 0
+      },
+      "hp": {
+        "quality": 1,
+        "main": 4000,
+        "total": 4400,
+        "bonus": {
+          "level": 400
+        },
+        "level": 0
+      },
+      "m_def": {
+        "quality": 1,
+        "main": 21,
+        "total": 31.6,
+        "bonus": {
+          "level": 2.1
+        },
+        "level": 0
+      },
+      "p_def": {
+        "quality": 1,
+        "main": 21,
+        "total": 31.6,
+        "bonus": {
+          "level": 2.1
+        },
+        "level": 0
+      },
+      "skill_atk": {
+        "quality": 1,
+        "main": 20,
+        "total": 22,
+        "bonus": {
+          "level": 2
+        },
+        "level": 0
+      },
+      "skill_def": {
+        "quality": 1,
+        "main": 20,
+        "total": 22,
+        "bonus": {
+          "level": 2
+        },
+        "level": 0
+      },
+      "mp_restore": {
+        "quality": 1,
+        "main": 3.2,
+        "total": 3.5,
+        "bonus": {
+          "level": 0.3
+        },
+        "level": 0
+      }
+    },
+    "element": [
+      "bug",
+      "poison"
+    ],
+    "element_bonus": {
+      "defend": {
+        "normal": {
+          "level": 0,
+          "total": 0
+        },
+        "fighting": {
+          "level": 0,
+          "total": 0
+        },
+        "flying": {
+          "level": 0,
+          "total": 0
+        },
+        "poison": {
+          "level": 0,
+          "total": 0
+        },
+        "ground": {
+          "level": 0,
+          "total": 0
+        },
+        "rock": {
+          "level": 0,
+          "total": 0
+        },
+        "bug": {
+          "level": 0,
+          "total": 0
+        },
+        "ghost": {
+          "level": 0,
+          "total": 0
+        },
+        "steel": {
+          "level": 0,
+          "total": 0
+        },
+        "fire": {
+          "level": 0,
+          "total": 0
+        },
+        "water": {
+          "level": 0,
+          "total": 0
+        },
+        "grass": {
+          "level": 0,
+          "total": 0
+        },
+        "electric": {
+          "level": 0,
+          "total": 0
+        },
+        "psychic": {
+          "level": 0,
+          "total": 0
+        },
+        "ice": {
+          "level": 0,
+          "total": 0
+        },
+        "dragon": {
+          "level": 0,
+          "total": 0
+        },
+        "dark": {
+          "level": 0,
+          "total": 0
+        },
+        "fairy": {
+          "level": 0,
+          "total": 0
+        }
+      },
+      "attack": {
+        "normal": {
+          "level": 0,
+          "total": 0
+        },
+        "fighting": {
+          "level": 0,
+          "total": 0
+        },
+        "flying": {
+          "level": 0,
+          "total": 0
+        },
+        "poison": {
+          "level": 0,
+          "total": 0
+        },
+        "ground": {
+          "level": 0,
+          "total": 0
+        },
+        "rock": {
+          "level": 0,
+          "total": 0
+        },
+        "bug": {
+          "level": 0,
+          "total": 0
+        },
+        "ghost": {
+          "level": 0,
+          "total": 0
+        },
+        "steel": {
+          "level": 0,
+          "total": 0
+        },
+        "fire": {
+          "level": 0,
+          "total": 0
+        },
+        "water": {
+          "level": 0,
+          "total": 0
+        },
+        "grass": {
+          "level": 0,
+          "total": 0
+        },
+        "electric": {
+          "level": 0,
+          "total": 0
+        },
+        "psychic": {
+          "level": 0,
+          "total": 0
+        },
+        "ice": {
+          "level": 0,
+          "total": 0
+        },
+        "dragon": {
+          "level": 0,
+          "total": 0
+        },
+        "dark": {
+          "level": 0,
+          "total": 0
+        },
+        "fairy": {
+          "level": 0,
+          "total": 0
+        }
+      }
+    },
+    "info": {
+      "quality": 1,
+      "cp_source": 682,
+      "cp": 751,
+      "perfect": 53.8,
+      "name": "Weedle",
+      "gen": "1",
+      "pokedex": 13,
+      "level": 10,
+      "training": 1,
+      "role": "damage",
+      "total_point": 195,
+      "upgrade": 0
+    },
+    "training": {
+      "level": 10,
+      "exp": 0,
+      "point": {
+        "total": 20,
+        "remain": 20,
+        "bonus": 0
+      }
+    },
+    "skill": {
+      "sign": "shield_self_50",
+      "name": "shell_armor",
+      "level": 1
+    }
+  },
+  {
+    "stats": {
+      "p_attack": {
+        "quality": 1,
+        "main": 300,
+        "total": 360,
+        "bonus": {
+          "level": 60
+        },
+        "level": 0
+      },
+      "m_attack": {
+        "quality": 1,
+        "main": 0,
+        "total": 0,
+        "bonus": {
+          "level": 0
+        },
+        "level": 0
+      },
+      "critical": {
+        "quality": 1,
+        "main": 6.5,
+        "total": 7.8,
+        "bonus": {
+          "level": 1.3
+        },
+        "level": 0
+      },
+      "speed": {
+        "quality": 1,
+        "main": 450,
+        "total": 0.9,
+        "bonus": {
+          "level": 90
+        },
+        "level": 0
+      },
+      "hp": {
+        "quality": 1,
+        "main": 4500,
+        "total": 5400,
+        "bonus": {
+          "level": 900
+        },
+        "level": 0
+      },
+      "m_def": {
+        "quality": 1,
+        "main": 17.1,
+        "total": 29.1,
+        "bonus": {
+          "level": 3.4
+        },
+        "level": 0
+      },
+      "p_def": {
+        "quality": 1,
+        "main": 31.8,
+        "total": 43.2,
+        "bonus": {
+          "level": 6.3
+        },
+        "level": 0
+      },
+      "skill_atk": {
+        "quality": 1,
+        "main": 20,
+        "total": 24,
+        "bonus": {
+          "level": 4
+        },
+        "level": 0
+      },
+      "skill_def": {
+        "quality": 1,
+        "main": 20,
+        "total": 24,
+        "bonus": {
+          "level": 4
+        },
+        "level": 0
+      },
+      "mp_restore": {
+        "quality": 1,
+        "main": 3.2,
+        "total": 3.8,
+        "bonus": {
+          "level": 0.6
+        },
+        "level": 0
+      }
+    },
+    "element": [
+      "bug"
+    ],
+    "element_bonus": {
+      "defend": {
+        "normal": {
+          "level": 0,
+          "total": 0
+        },
+        "fighting": {
+          "level": 0,
+          "total": 0
+        },
+        "flying": {
+          "level": 0,
+          "total": 0
+        },
+        "poison": {
+          "level": 0,
+          "total": 0
+        },
+        "ground": {
+          "level": 0,
+          "total": 0
+        },
+        "rock": {
+          "level": 0,
+          "total": 0
+        },
+        "bug": {
+          "level": 0,
+          "total": 0
+        },
+        "ghost": {
+          "level": 0,
+          "total": 0
+        },
+        "steel": {
+          "level": 0,
+          "total": 0
+        },
+        "fire": {
+          "level": 0,
+          "total": 0
+        },
+        "water": {
+          "level": 0,
+          "total": 0
+        },
+        "grass": {
+          "level": 0,
+          "total": 0
+        },
+        "electric": {
+          "level": 0,
+          "total": 0
+        },
+        "psychic": {
+          "level": 0,
+          "total": 0
+        },
+        "ice": {
+          "level": 0,
+          "total": 0
+        },
+        "dragon": {
+          "level": 0,
+          "total": 0
+        },
+        "dark": {
+          "level": 0,
+          "total": 0
+        },
+        "fairy": {
+          "level": 0,
+          "total": 0
+        }
+      },
+      "attack": {
+        "normal": {
+          "level": 0,
+          "total": 0
+        },
+        "fighting": {
+          "level": 0,
+          "total": 0
+        },
+        "flying": {
+          "level": 0,
+          "total": 0
+        },
+        "poison": {
+          "level": 0,
+          "total": 0
+        },
+        "ground": {
+          "level": 0,
+          "total": 0
+        },
+        "rock": {
+          "level": 0,
+          "total": 0
+        },
+        "bug": {
+          "level": 0,
+          "total": 0
+        },
+        "ghost": {
+          "level": 0,
+          "total": 0
+        },
+        "steel": {
+          "level": 0,
+          "total": 0
+        },
+        "fire": {
+          "level": 0,
+          "total": 0
+        },
+        "water": {
+          "level": 0,
+          "total": 0
+        },
+        "grass": {
+          "level": 0,
+          "total": 0
+        },
+        "electric": {
+          "level": 0,
+          "total": 0
+        },
+        "psychic": {
+          "level": 0,
+          "total": 0
+        },
+        "ice": {
+          "level": 0,
+          "total": 0
+        },
+        "dragon": {
+          "level": 0,
+          "total": 0
+        },
+        "dark": {
+          "level": 0,
+          "total": 0
+        },
+        "fairy": {
+          "level": 0,
+          "total": 0
+        }
+      }
+    },
+    "info": {
+      "quality": 1,
+      "cp_source": 682,
+      "cp": 819,
+      "perfect": 53.8,
+      "name": "Caterpie",
+      "gen": "1",
+      "pokedex": 10,
+      "level": 20,
+      "training": 1,
+      "role": "tank",
+      "total_point": 195,
+      "upgrade": 0
+    },
+    "training": {
+      "level": 20,
+      "exp": 0,
+      "point": {
+        "total": 40,
+        "remain": 40,
+        "bonus": 0
+      }
+    },
+    "skill": {
+      "sign": "shield_self_50",
+      "name": "shell_armor",
+      "level": 1
+    }
+  }
+]

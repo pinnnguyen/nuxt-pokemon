@@ -1,6 +1,6 @@
 import type { StatsKey } from '~/types/pokemon'
 
-export const STATS_NAME: Record<StatsKey, string> = {
+export const statsName: Record<StatsKey, string> = {
   p_attack: 'Sát thương vật lý',
   m_attack: 'Sát thương phép thuật',
   critical: 'Chí mạng',
@@ -13,7 +13,7 @@ export const STATS_NAME: Record<StatsKey, string> = {
   mp_restore: 'Hồi năng lượng',
 }
 
-export const STATS_LEVEL_BONUS: Record<StatsKey, number> = {
+export const statsLevelBonus: Record<StatsKey, number> = {
   p_attack: 40,
   m_attack: 40,
   critical: 0.8,
@@ -26,7 +26,7 @@ export const STATS_LEVEL_BONUS: Record<StatsKey, number> = {
   mp_restore: 0.19,
 }
 
-export const STATS_TO_CP: Record<string, number> = {
+export const statsToCP: Record<string, number> = {
   p_attack: 1.4,
   m_attack: 1.4,
   critical: 2,

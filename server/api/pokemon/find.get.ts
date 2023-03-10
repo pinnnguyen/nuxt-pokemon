@@ -11,14 +11,14 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  if (!query.pokedex) {
+  if (!query.pokemonId) {
     return {
       success: false,
-      message: 'Missing pokedex',
+      message: 'Missing pokemonId',
     }
   }
 
-  const pokemon = await PlayerPokemonSchema.findOne({ pokedex: query.pokedex, sid: session.sid })
+  const pokemon = await PlayerPokemonSchema.findOne({ _id: query.pokemonId, sid: session.sid })
   if (!pokemon) {
     return {
       success: false,

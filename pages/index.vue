@@ -1,9 +1,7 @@
 <script setup lang="ts">
-// import { useSoundHomeEvent } from '#imports'
-// import { useSound } from '@vueuse/sound'
-// import { shouldTupo } from '~/server/common'
-
 const { playerInfo } = storeToRefs(usePlayerStore())
+const { setShouldTraining } = useControlStore()
+
 definePageMeta({
   middleware: ['game'],
   auth: false,
@@ -60,7 +58,7 @@ definePageMeta({
         </div>
       </div>
       <div class="w-full text-center mt-4">
-        <button class="button-yes">
+        <button class="button-yes" @click="setShouldTraining(true)">
           Huấn luyện
         </button>
       </div>

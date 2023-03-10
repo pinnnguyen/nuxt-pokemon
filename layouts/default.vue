@@ -1,10 +1,11 @@
 <script setup>
-const { shouldPoList } = storeToRefs(useControlStore())
+const { shouldPoList, shouldTraining } = storeToRefs(useControlStore())
 </script>
 
 <template>
   <PokemonList v-if="shouldPoList" />
-  <template v-else>
+  <Training v-if="shouldTraining" />
+  <template v-if="!shouldPoList && !shouldTraining">
     <PageNavbar />
     <slot />
     <PageBottom />

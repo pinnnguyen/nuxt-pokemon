@@ -1,6 +1,6 @@
 export const usePlayerStore = defineStore('player', () => {
   const playerInfo = ref()
-  const pokemons = computed(() => playerInfo.value.pokemons)
+  const pokemonList = computed(() => playerInfo.value.pokemons)
   const loadPlayer = (data: any) => {
     playerInfo.value = data
   }
@@ -38,7 +38,7 @@ export const usePlayerStore = defineStore('player', () => {
     playerInfo,
     getPlayer,
     loadPlayer,
-    pokemons,
+    pokemonList,
   }
 })
 
