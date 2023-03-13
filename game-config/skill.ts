@@ -1,11 +1,11 @@
-export const skillName = {
+export const SkillToName = {
   suicide: {
     label: 'Tự sát',
     des: '',
   },
 }
 
-export const skillList = [
+export const SkillList = [
   {
     damage_convert_single_70: {
       target: 'enemy',

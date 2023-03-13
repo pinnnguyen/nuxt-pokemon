@@ -1,4 +1,4 @@
-import { PlayerPokemonSchema, formatPokemonInfo } from '~/server/schema'
+import { formatPokemonInfo, playerPokemonSchema } from '~/server/schema'
 import { getServerSession } from '#auth'
 
 export default defineEventHandler(async (event) => {
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  const pokemon = await PlayerPokemonSchema.findOne({ _id: query.pokemonId, sid: session.sid })
+  const pokemon = await playerPokemonSchema.findOne({ _id: query.pokemonId, sid: session.sid })
   if (!pokemon) {
     return {
       success: false,

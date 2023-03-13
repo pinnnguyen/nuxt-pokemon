@@ -6,12 +6,6 @@ definePageMeta({
   middleware: ['game'],
   auth: false,
 })
-
-// onMounted(async () => {
-//   setTimeout(async () => {
-//     await useSoundHomeEvent().play()
-//   }, 10000)
-// })
 </script>
 
 <template>

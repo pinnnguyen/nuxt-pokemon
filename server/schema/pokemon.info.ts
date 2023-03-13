@@ -23,4 +23,4 @@ const schema = new mongoose.Schema<Pokemon>(
 )
 
 schema.index({ 'info.pokedex': -1 }, { unique: true })
-export const PokemonInfoSchema = mongoose.model('PokemonInfoSchema', schema, POKEMON_INFO_SCHEMA)
+export const pokemonInfoSchema = mongoose.model('pokemonInfoSchema', schema, POKEMON_INFO_SCHEMA)

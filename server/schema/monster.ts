@@ -6,8 +6,6 @@ const schema = new mongoose.Schema<Pokemon>(
     _id: {
       type: String,
     },
-    sid: String,
-    pokedex: Number,
     info: {},
     stats: {},
     element: [],
@@ -20,5 +18,5 @@ const schema = new mongoose.Schema<Pokemon>(
   },
 )
 
-schema.index({ pokedex: -1 }, { unique: true })
-export const MonsterSchema = mongoose.model('MonsterSchema', schema, 'monsters')
+// schema.index({ pokedex: -1 }, { unique: true })
+export const monsterSchema = mongoose.model('monsterSchema', schema, 'monsters')

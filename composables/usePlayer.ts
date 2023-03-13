@@ -1,9 +1,7 @@
 export const usePlayerStore = defineStore('player', () => {
   const playerInfo = ref()
   const pokemonList = computed(() => playerInfo.value.pokemons)
-  const loadPlayer = (data: any) => {
-    playerInfo.value = data
-  }
+  const trainings = computed(() => playerInfo.value.trainings)
 
   const getPlayer = async () => {
     const data = await $fetch('/api/player', {
@@ -20,25 +18,22 @@ export const usePlayerStore = defineStore('player', () => {
     if (!pokemonSelected)
       showToast({ message: 'Vui lòng chọn pokemon khởi đầu', position: 'bottom' })
 
-    const role = await $fetch('/api/player/create-role', {
+    playerInfo.value = await $fetch('/api/player/create-role', {
       method: 'POST',
       headers: (useRequestHeaders(['cookie']) as any),
       body: {
         pokedex: pokemonSelected,
       },
     })
-
-    loadPlayer(role)
     navigateTo('/')
-    return role
   }
 
   return {
     createFigure,
     playerInfo,
     getPlayer,
-    loadPlayer,
     pokemonList,
+    trainings,
   }
 })
 

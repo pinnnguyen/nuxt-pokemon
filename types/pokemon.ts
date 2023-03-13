@@ -71,6 +71,7 @@ export interface Pokemon {
     pokedex: number
     role?: string
     point?: number
+    training?: number
   }
   stats: {
     [key in StatsKey | string]: BaseStats

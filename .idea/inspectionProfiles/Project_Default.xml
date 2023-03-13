@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="75">
+          <list size="81">
             <item index="0" class="java.lang.String" itemvalue="h-full" />
             <item index="1" class="java.lang.String" itemvalue="relative" />
             <item index="2" class="java.lang.String" itemvalue="min-h-screen" />
@@ -81,6 +81,12 @@
             <item index="72" class="java.lang.String" itemvalue="mb-15" />
             <item index="73" class="java.lang.String" itemvalue="w-30" />
             <item index="74" class="java.lang.String" itemvalue="mb-60" />
+            <item index="75" class="java.lang.String" itemvalue="text-20" />
+            <item index="76" class="java.lang.String" itemvalue="h-50" />
+            <item index="77" class="java.lang.String" itemvalue="w-50" />
+            <item index="78" class="java.lang.String" itemvalue="mb-20" />
+            <item index="79" class="java.lang.String" itemvalue="right-5" />
+            <item index="80" class="java.lang.String" itemvalue="bg-yellow-700" />
           </list>
         </value>
       </option>

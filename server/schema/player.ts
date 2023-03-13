@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 import { PLAYER_POKEMON_SCHEMA, PLAYER_SCHEMA } from '~/server/constant'
-
 const ObjectId = mongoose.Types.ObjectId
 
 const schema = new mongoose.Schema(
@@ -16,6 +15,7 @@ const schema = new mongoose.Schema(
     name: String,
     pokeSilver: Number,
     pokeCoin: Number,
+    trainings: [],
   },
   {
     timestamps: true,
@@ -23,10 +23,10 @@ const schema = new mongoose.Schema(
 )
 
 schema.index({ username: -1 }, { unique: true })
-export const PlayerSchema = mongoose.model('PlayerSchema', schema, PLAYER_SCHEMA)
+export const playerSchema = mongoose.model('playerSchema', schema, PLAYER_SCHEMA)
 
 export const getPlayer = async (sid?: string | null) => {
-  return PlayerSchema.aggregate([
+  return playerSchema.aggregate([
     {
       $match: {
         sid,
@@ -38,10 +38,12 @@ export const getPlayer = async (sid?: string | null) => {
         localField: 'sid',
         foreignField: 'sid',
         as: 'pokemons',
+        pipeline: [
+          {
+            $limit: 1,
+          },
+        ],
       },
-    },
-    {
-      $limit: 1,
     },
   ])
 }

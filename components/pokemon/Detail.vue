@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { statsLevelBonus, statsName } from '~/game-config'
+import { StatsLevelBonus, StatsName } from '~/game-config'
 const { prepareAddPoint } = useStats()
 const { pokemonDetail } = storeToRefs(usePokemon())
 </script>
@@ -77,14 +77,14 @@ const { pokemonDetail } = storeToRefs(usePokemon())
         flex items-center justify-between w-full h-12 text-16
       >
         <div flex items-center justify-center gap-1>
-          {{ statsName[key] }}
+          {{ StatsName[key] }}
           <span opacity-50>{{ stat?.quality }}</span>
         </div>
         <div flex items-center gap-1>
           <span>{{ stat?.total }}</span>
           <NuxtImg mr-1 h-5 src="/common/pokemon_stats_right.png" />
           <div w-25 text-right flex items-center justify-end gap-2>
-            <span text-green-500>{{ Math.round(((stat?.total) + statsLevelBonus[key]) * 100) / 100 }}</span>
+            <span text-green-500>{{ Math.round(((stat?.total) + StatsLevelBonus[key]) * 100) / 100 }}</span>
             <span opacity-50>{{ stat?.level + 2 }}</span>
             <Icon name="ic:baseline-add-circle" size="26" @click="prepareAddPoint(key, stat, pokemonDetail._id)" />
           </div>

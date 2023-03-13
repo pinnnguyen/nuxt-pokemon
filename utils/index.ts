@@ -111,3 +111,10 @@ export function fromNow(to: number, now = +new Date()) {
 }
 
 export const cloneDeep = <T>(data: T): T => JSON.parse(JSON.stringify(data))
+
+export const randomIdNumber = (length?: number) => {
+  if (!length)
+    length = 1000
+
+  return Math.floor(Math.random() * length)
+}

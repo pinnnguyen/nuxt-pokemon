@@ -29,7 +29,16 @@ export default defineNuxtConfig({
     '@vant/nuxt',
     '@nuxt/image-edge',
     '@nuxt/devtools',
+    // 'nuxt-security',
   ],
+  // security: {
+  //   headers: {
+  //     crossOriginEmbedderPolicy: {
+  //       value: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
+  //       route: '/**',
+  //     },
+  //   },
+  // },
   auth: {
     origin: process.env.ORIGIN_URL,
     enableGlobalAppMiddleware: false,

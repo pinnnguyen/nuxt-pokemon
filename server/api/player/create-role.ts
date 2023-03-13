@@ -1,4 +1,4 @@
-import { PlayerPokemonSchema, PlayerSchema, PokemonInfoSchema, rollOnePokemonById } from '~/server/schema'
+import { playerPokemonSchema, playerSchema, pokemonInfoSchema, rollOnePokemonById } from '~/server/schema'
 import { getServerSession } from '#auth'
 
 interface CreateRoleBody {
@@ -16,11 +16,11 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const pokemonInfoData = await PokemonInfoSchema.findOne({ 'info.pokedex': body.pokedex })
+  const pokemonInfoData = await pokemonInfoSchema.findOne({ 'info.pokedex': body.pokedex }).select({ _id: false })
   const randomName = (Math.random() + 1).toString(36).substring(7)
 
   const pokeRoll = await rollOnePokemonById(pokemonInfoData?.info?.pokedex)
-  const createPlayer = await PlayerSchema.create({
+  const createPlayer = await playerSchema.create({
     sid: (session as any).sid,
     username: session?.user?.email,
     name: randomName,
@@ -28,15 +28,13 @@ export default defineEventHandler(async (event) => {
     pokeSilver: 0,
   })
 
-  const createPlayerPokemon = await PlayerPokemonSchema.create({
+  const createPlayerPokemon = await playerPokemonSchema.create({
     sid: (session as any).sid,
-    pokedex: pokeRoll.info.pokedex,
-    ...pokeRoll,
+    stats: pokeRoll.stats,
+    skill: pokeRoll.skill,
+    info: pokeRoll.info,
+    element: pokeRoll.element,
   })
-  // return {
-  //   player: {},
-  //   pokemons: {},
-  // }
 
   return {
     player: createPlayer,

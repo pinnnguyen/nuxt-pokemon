@@ -5,8 +5,11 @@ export default defineNuxtRouteMiddleware(async () => {
     await usePlayerStore().getPlayer()
   }
   catch (e) {
-    return
+    console.log('e', e)
   }
+
+  if (status.value !== 'authenticated')
+    return navigateTo('/login')
 
   if (status.value === 'authenticated' && playerInfo.value)
     return navigateTo('/')

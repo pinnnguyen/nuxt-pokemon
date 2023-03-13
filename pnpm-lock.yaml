@@ -15,6 +15,7 @@ specifiers:
   next-auth: 4.18.8
   nuxt: ^3.2.3
   nuxt-icon: ^0.3.2
+  nuxt-security: ^0.12.0
   prettier: ^2.8.4
   typescript: ^4.9.5
   vant: ^4.1.0
@@ -36,6 +37,7 @@ devDependencies:
   mongoose: 7.0.1
   nuxt: 3.2.3_ycpbpc6yetojsgtrx3mwntkhsu
   nuxt-icon: 0.3.2
+  nuxt-security: 0.12.0
   prettier: 2.8.4
   typescript: 4.9.5
   vant: 4.1.0
@@ -2881,6 +2883,13 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: true
 
+  /basic-auth/2.0.1:
+    resolution: {integrity: sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==}
+    engines: {node: '>= 0.8'}
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: true
+
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -3452,7 +3461,6 @@ packages:
   /cssfilter/0.0.10:
     resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
     dev: true
-    optional: true
 
   /cssnano-preset-default/5.2.14_postcss@8.4.21:
     resolution: {integrity: sha512-t0SFesj/ZV2OTylqQVOrFgEh5uanxbO6ZAdeCrNsUQ6fVuXwYTxJPNAGvGTxHbD68ldIJNec7PyYZDBrfDQ+6A==}
@@ -5607,6 +5615,10 @@ packages:
     dev: true
     optional: true
 
+  /just-performance/4.3.0:
+    resolution: {integrity: sha512-L7RjvtJsL0QO8xFs5wEoDDzzJwoiowRw6Rn/GnvldlchS2JQr9wFYPiwZcDfrbbujEKqKN0tvENdbjXdYhDp5Q==}
+    dev: true
+
   /jwa/1.4.1:
     resolution: {integrity: sha512-qiLX/xhEEFKUAJ6FiBMbes3w9ATzyk5W7Hvzpa/SLYdxNtng+gcurvrI7TbACjIXlsJyr05/S1oUhZrc63evQA==}
     dependencies:
@@ -5689,6 +5701,12 @@ packages:
   /lilconfig/2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /limiter/2.1.0:
+    resolution: {integrity: sha512-361TYz6iay6n+9KvUUImqdLuFigK+K79qrUtBsXhJTLdH4rIt/r1y8r1iozwh8KbZNpujbFTSh74mJ7bwbAMOw==}
+    dependencies:
+      just-performance: 4.3.0
     dev: true
 
   /lines-and-columns/1.2.4:
@@ -5974,6 +5992,10 @@ packages:
 
   /mdn-data/2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    dev: true
+
+  /memory-cache/0.2.0:
+    resolution: {integrity: sha512-OcjA+jzjOYzKmKS6IQVALHLVz+rNTMPoJvCztFaZxwG14wtAW7VRZjwTQu06vKCYOxh4jVnik7ya0SXTB0W+xA==}
     dev: true
 
   /memory-fs/0.5.0:
@@ -6658,6 +6680,16 @@ packages:
       - supports-color
     dev: true
 
+  /nuxt-csurf/1.2.0:
+    resolution: {integrity: sha512-sO8Hm3fR+GB3DMc0y1Slzt+f9LiUKpvF/qvUUZBWz1ZknfTRTYemZkfSNcoYf0/hoL2Wb9O0c8pFtzj0hs8Spw==}
+    dependencies:
+      '@nuxt/kit': 3.2.3
+      defu: 6.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt-icon/0.3.2:
     resolution: {integrity: sha512-066pfova2nE9GZDvHE9oMkqJCwsnJvOZKU2FOSzRpjfXupH3UPtP9Zw8+C2wvZ82Nel6fuRoIUNQh5Sx8ZeQrQ==}
     dependencies:
@@ -6668,6 +6700,22 @@ packages:
       - rollup
       - supports-color
       - vue
+    dev: true
+
+  /nuxt-security/0.12.0:
+    resolution: {integrity: sha512-Ed4CbkPBa7DzkvCwbOhJoXN+mg/Htj1agd1hfHqjf1KA5CDAwR8dgxaN5z7uC76RpHQ9tGP1niHNSmcs3D8D0Q==}
+    dependencies:
+      '@nuxt/kit': 3.2.3
+      basic-auth: 2.0.1
+      defu: 6.1.2
+      limiter: 2.1.0
+      memory-cache: 0.2.0
+      nuxt-csurf: 1.2.0
+      pathe: 1.1.0
+      xss: 1.0.14
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /nuxt/3.2.3_ycpbpc6yetojsgtrx3mwntkhsu:
@@ -9224,7 +9272,6 @@ packages:
       commander: 2.20.3
       cssfilter: 0.0.10
     dev: true
-    optional: true
 
   /xxhashjs/0.2.2:
     resolution: {integrity: sha512-AkTuIuVTET12tpsVIQo+ZU6f/qDmKuRUcjaqR+OIvm+aCBsZ95i7UVY5WJ9TMsSaZ0DA2WxoZ4acu0sPH+OKAw==}

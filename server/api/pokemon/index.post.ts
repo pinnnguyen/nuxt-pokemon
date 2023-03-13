@@ -1,7 +1,7 @@
-import { PokemonInfoSchema } from '~/server/schema'
+import { pokemonInfoSchema } from '~/server/schema'
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  return PokemonInfoSchema.find({
+  return pokemonInfoSchema.find({
     'info.pokedex': body.pokedexs,
   })
 })

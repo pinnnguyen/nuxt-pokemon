@@ -1,6 +1,6 @@
 import { getServerSession } from '#auth'
-import { PlayerPokemonSchema } from '~/server/schema'
-import { statsLevelBonus } from '~/game-config'
+import { playerPokemonSchema } from '~/server/schema'
+import { StatsLevelBonus } from '~/game-config'
 
 export default defineEventHandler(async (event) => {
   const session: any = await getServerSession(event)
@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  const pokemon = await PlayerPokemonSchema.findById(body.pokemon).select('stats info')
+  const pokemon = await playerPokemonSchema.findById(body.pokemon).select('stats info')
   if (!pokemon) {
     return {
       success: false,
@@ -56,14 +56,14 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  const levelBonus = statsLevelBonus[body.stat]
+  const levelBonus = StatsLevelBonus[body.stat]
   if (!stats[body.stat].bonus.point)
     stats[body.stat].bonus.point = 0
 
   stats[body.stat].level += 1
   stats[body.stat].bonus.point += levelBonus
 
-  await PlayerPokemonSchema.findByIdAndUpdate(body.pokemon, {
+  await playerPokemonSchema.findByIdAndUpdate(body.pokemon, {
     stats,
     $inc: {
       'info.point': -needPoint,
