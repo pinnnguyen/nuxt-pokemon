@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { poTraining } = storeToRefs(useTraining())
+const { setView } = useTraining()
 const { startWar } = useBattle()
 
 const training = computed(() => poTraining.value?.info?.training ?? 1)
@@ -8,11 +9,16 @@ const { data: poTrainingEnemy, pending } = useFetch('/api/training/monster', {
     level: training.value * 10,
   },
 })
+
+const start = async () => {
+  await startWar(poTrainingEnemy.value?._id, poTraining.value?._id)
+  setView('battle')
+}
 </script>
 
 <template>
   <div absolute class="absolute top-9/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <button class="button-yes" @click="startWar(poTrainingEnemy._id, poTraining._id)">
+    <button class="button-yes" @click="start">
       KHIÊU CHIẾN
     </button>
   </div>

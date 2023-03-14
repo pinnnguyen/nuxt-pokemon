@@ -12,6 +12,7 @@ const useTraining = defineStore('training', () => {
   const isTrainingView = computed(() => view.value === 'training')
   const isPrepareView = computed(() => view.value === 'prepare')
   const isEnemy = computed(() => view.value === 'enemy')
+  const isBattle = computed(() => view.value === 'battle')
 
   const { data: trainingList } = useFetch<Pokemon[]>('/api/training/list')
 
@@ -55,6 +56,7 @@ const useTraining = defineStore('training', () => {
 
   return {
     setView,
+    isBattle,
     isEnemy,
     isPrepareView,
     isTrainingView,

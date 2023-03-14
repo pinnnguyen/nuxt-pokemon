@@ -1,3 +1,215 @@
 .van-popup--center {
     max-width: calc(100vh * 0.67) !important;
 }
+
+.pokemon_battle_screen .bottom .standing:nth-child(1) {
+    margin-left: 80px;
+}
+
+.pokemon_battle_screen .top .standing:nth-child(4) {
+    margin-left: 80px;
+}
+
+.pokemon_battle_screen .top {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+}
+
+.pokemon_battle_screen .bottom {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+
+.pokemon_battle_screen .standing {
+    width: 150px;
+    height: 150px;
+    zoom: 0.9;
+    float: left;
+}
+
+.pokemon_battle_screen .standing .avatar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 33px;
+}
+
+.pokemon_battle_screen .hp_mp_bar {
+    position: absolute;
+    width: 60px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.pokemon_battle_screen .hp_mp_bar .bar_div {
+    margin-top: 1px;
+    height: 5px;
+    border: 1px solid #383838;
+}
+
+.pokemon_battle_screen .hp_mp_bar .status_icon {
+    margin-top: 3px;
+    position: absolute;
+}
+
+.pokemon_battle_screen .damage_value {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 80px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.pokemon_battle_screen .standing .stand {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    z-index: -1;
+    width: 130px;
+}
+
+.pokemon_battle_screen .standing .effect.show {
+    animation-name: effect;
+    animation-duration: 0.8s;
+}
+
+.bar_div {
+    width: 100%;
+    height: 10px;
+    display: inline-block;
+    background-color: #1C1C1C99;
+    border-radius: 140px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    border: 1px solid #1C1C1C99;
+}
+
+.pokemon_battle_screen .hp_mp_bar .bar {
+    background-color: #f0564a;
+}
+
+.pokemon_battle_screen .hp_mp_bar .bar_div.mp .bar {
+    background-color: rgb(54 170 225);
+}
+
+
+.pokemon_battle_screen .damage_value p {
+    color: #f15f5f;
+    text-shadow: 2px 1px 1px black;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.pokemon_battle_screen .damage_value p.critical, .pokemon_battle_screen .damage_value p.buff {
+    color: #dc4eff !important;
+}
+
+
+@keyframes effect {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes attack {
+    0% {
+        bottom: 33px;
+    }
+    50% {
+        bottom: 45px;
+    }
+    100% {
+        bottom: 33px;
+    }
+}
+
+@keyframes damage_value {
+    0% {
+        opacity: 0;
+        bottom: 80px;
+    }
+    20% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+        bottom: 120px;
+    }
+    100% {
+        opacity: 0;
+        bottom: 80px;
+    }
+}
+
+@keyframes attacked {
+    0% {
+        filter: brightness(1);
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    25% {
+        filter: brightness(1.5);
+        margin-left: -1px;
+        margin-bottom: -1px;
+    }
+    75% {
+        filter: brightness(1.5);
+        margin-left: 1px;
+        margin-bottom: 1px;
+    }
+    100% {
+        filter: brightness(1);
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+.pokemon_battle_screen .standing .effect {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    opacity: 0;
+}
+
+.pokemon_battle_screen .standing .attack {
+    animation-name: attack;
+    animation-duration: 0.4s;
+}
+
+.pokemon_battle_screen .standing .avatar.attacked {
+    animation-name: attacked;
+    animation-duration: 0.4s;
+}
+
+.pokemon_battle_screen .damage_value.show {
+    animation-name: damage_value;
+    animation-duration: 1s;
+}
+
+.bar_div .bar {
+    background-color: #FCD95F;
+    border-radius: 150px;
+    width: 50%;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    max-width: 100%;
+    text-align: center;
+    height: 100%;
+    transition: 0.5s;
+}

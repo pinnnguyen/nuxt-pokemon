@@ -21,6 +21,7 @@ export const handleWar = (pokemons: any, enemys: any) => {
     }
 
     teams[getIdTeam2] = {
+      teamPosition: 2,
       list: {
         [`${getIdTeam2}_${enemys[i]._id}`]: {
           info: enemys[i].info,
@@ -37,6 +38,7 @@ export const handleWar = (pokemons: any, enemys: any) => {
     }
 
     teams[getIdTeam1] = {
+      teamPosition: 1,
       list: {
         [`${getIdTeam1}_${pokemons[i]._id}`]: {
           info: pokemons[i].info,
@@ -63,14 +65,15 @@ export const handleWar = (pokemons: any, enemys: any) => {
       const attackerDamage = (attacker?.stats?.m_attack.total ?? 0) + (attacker?.stats?.p_attack.total ?? 0)
       const defenderDef = defender?.stats?.m_def.total + defender?.stats?.p_def.total
       const originDMG = Math.round(attackerDamage - defenderDef * 0.75)
-
       defender.stats.hp.total -= originDMG
 
       emulator.push({
+        emuId: `${attacker.team}_${attacker._id}`,
         name: attacker.info.name,
         action: 'attack',
         critical: false,
-        realtime: {
+        target: `${defender.team}_${defender._id}`,
+        receive: {
           [`${defender.team}_${defender._id}`]: {
             receiveDamage: originDMG,
           },
