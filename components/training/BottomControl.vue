@@ -5,7 +5,7 @@ const { setShouldTrainingStep, setView } = useTraining()
 
 <template>
   <div w-full absolute flex items-start justify-between top-5 h-20 px-4 cursor-pointer>
-    <NuxtImg format="webp" w-15 h-15 src="/icons/back.png" @click="setShouldTrainingStep" />
+    <NuxtImg format="webp" w-15 h-15 src="/icons/back.png" @click.stop="setShouldTrainingStep" />
     <template v-if="isPrepareView">
       <div v-if="poTraining" relative>
         <NuxtImg w-30 format="webp" object-cover src="/common/training_floor.png" />

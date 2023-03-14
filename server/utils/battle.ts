@@ -6,10 +6,10 @@ interface onevone {
   pokemonId: string
 }
 
-export const handleWar = (pokemons: any, enemys: any) => {
+export const handleWar = async (pokemons: any, enemys: any, format: 'solo' | '5v5') => {
   const getIdTeam1 = randomIdNumber()
   const getIdTeam2 = randomIdNumber()
-  const teams = {
+  const teams: Record<string, any> = {
     [getIdTeam1]: {},
     [getIdTeam2]: {},
   }
@@ -24,6 +24,7 @@ export const handleWar = (pokemons: any, enemys: any) => {
       teamPosition: 2,
       list: {
         [`${getIdTeam2}_${enemys[i]._id}`]: {
+          _id: enemys[i]._id,
           info: enemys[i].info,
           hp: enemys[i].stats.hp.total,
         },
@@ -41,6 +42,7 @@ export const handleWar = (pokemons: any, enemys: any) => {
       teamPosition: 1,
       list: {
         [`${getIdTeam1}_${pokemons[i]._id}`]: {
+          _id: pokemons[i]._id,
           info: pokemons[i].info,
           hp: pokemons[i].stats.hp.total,
         },
@@ -72,7 +74,6 @@ export const handleWar = (pokemons: any, enemys: any) => {
         name: attacker.info.name,
         action: 'attack',
         critical: false,
-        target: `${defender.team}_${defender._id}`,
         receive: {
           [`${defender.team}_${defender._id}`]: {
             receiveDamage: originDMG,
@@ -97,8 +98,27 @@ export const handleWar = (pokemons: any, enemys: any) => {
     })
 
     if (endGame) {
+      const teamWin = teams[winner]
+      const teamPos = teamWin.teamPosition
+
+      if (format === 'solo' && teamPos === 1) {
+        for (const k in teamWin.list) {
+          const pokemonId = teamWin.list[k]._id
+          if (!pokemonId)
+            break
+
+          console.log('you win', pokemonId)
+          await playerPokemonSchema.findByIdAndUpdate(pokemonId, {
+            $inc: {
+              'info.training': 1,
+            },
+          })
+        }
+      }
+
       return {
         winner,
+        format,
         emulators,
         teams: {
           ...teams,
@@ -125,5 +145,5 @@ export const handle1v1Battle = async (body: onevone) => {
     }
   }
 
-  return handleWar(pokemons, enemys)
+  return handleWar(pokemons, enemys, 'solo')
 }

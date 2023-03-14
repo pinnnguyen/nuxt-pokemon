@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { emulators, teams } = storeToRefs(useBattle())
+const { emulators, teams, format } = storeToRefs(useBattle())
 const realTime = ref()
 const receive = ref()
 const now = ref()
@@ -41,6 +41,9 @@ const health = (emuId: string, maxHp: number) => {
   if (!now.value)
     return 100
 
+  if (now.value.hp[emuId] <= 0)
+    return 0
+
   return (now.value.hp[emuId] / maxHp) * 100
 }
 
@@ -51,6 +54,8 @@ const doAction = (emuId: string) => {
 const receiveDamage = (emuId: string) => {
   return receive.value && receive.value[emuId]?.receiveDamage
 }
+
+const isSolo = computed(() => format.value === 'solo')
 </script>
 
 <template>
@@ -62,7 +67,7 @@ const receiveDamage = (emuId: string) => {
         top: battle.teamPosition === 2,
       }"
     >
-      <div v-for="(b, emuId) in battle.list" :key="emuId" class="relative standing">
+      <div v-for="(b, emuId) in battle.list" :key="emuId" class="relative standing" :class="{ total_1: isSolo }">
         <div
           class="effect"
           :class="{
@@ -78,7 +83,7 @@ const receiveDamage = (emuId: string) => {
           }"
         >
           <p class="attack">
-            {{ receiveDamage(emuId) }}
+            -{{ receiveDamage(emuId) }}
           </p>
         </div>
         <div class="hp_mp_bar">

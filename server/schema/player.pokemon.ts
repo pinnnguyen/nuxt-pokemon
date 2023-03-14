@@ -22,6 +22,7 @@ const schema = new mongoose.Schema<Pokemon>(
     skill: {},
     element_bonus: {},
     training: {},
+    last_time_received_rss: Number,
   },
   {
     timestamps: true,

@@ -38,6 +38,10 @@ const useTraining = defineStore('training', () => {
   }
 
   const setShouldTrainingStep = () => {
+    console.log('click')
+    if (view.value === 'battle')
+      return view.value = 'training'
+
     if (view.value === 'enemy')
       return view.value = 'training'
 
